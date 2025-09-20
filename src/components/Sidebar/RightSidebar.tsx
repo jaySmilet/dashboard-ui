@@ -31,7 +31,7 @@ const RightSidebar = () => {
                   </div>
                   <div className="flex flex-col gap-1">
                     <p className="text-sm font-normal text-[var(--text-strong)]">
-                      {section.title === "Contacts"
+                      {item.text.length <= 25
                         ? item.text
                         : item.text.slice(0, 25) + "..."}
                     </p>
