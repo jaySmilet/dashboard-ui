@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "./components/Sidebar/Sidebar";
+import LeftSidebar from "./components/Sidebar/LeftSidebar";
 
 const DashboardLayout = () => {
   return (
@@ -13,7 +13,7 @@ const DashboardLayout = () => {
     >
       {/* Sidebar fixed on md+ */}
       <aside className="hidden md:block bg-white dark:bg-gray-800 border-r [border-color:rgba(28,28,28,0.1)] px-4 py-5">
-        <Sidebar />
+        <LeftSidebar />
       </aside>
 
       {/* Main content always visible */}

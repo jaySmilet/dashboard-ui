@@ -2,7 +2,7 @@ import React from "react";
 import { useImagePath } from "../../hooks/useImagePath";
 import { menus, type Menu, type MenuChild } from "../../static/static-data";
 
-const Sidebar = () => {
+const LeftSidebar = () => {
   const { getImage } = useImagePath();
   const [myMenu, setmyMenu] = React.useState<Menu[]>(menus);
 
@@ -134,4 +134,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default LeftSidebar;
