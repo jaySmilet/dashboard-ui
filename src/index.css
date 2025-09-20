@@ -10,6 +10,9 @@
   --text-medium: rgba(28, 28, 28, 0.4);
   --text-light: rgba(28, 28, 28, 0.2);
   --text-extra-light: rgba(28, 28, 28, 0.06);
+  --primary-blue: rgba(227, 245, 255, 1);
+  --primary-purple: rgba(229, 236, 246, 1);
+
 }
 
 .dark {
