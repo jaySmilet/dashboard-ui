@@ -1,12 +1,5 @@
-import React from "react";
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
-interface SalesData {
-  name: string;
-  value: number;
-  color: string;
-  [key: string]: string | number;
-}
 const PieCharts = () => {
   const data = [
     { name: "Direct", value: 400, color: "#1C1C1C" },
@@ -15,9 +8,6 @@ const PieCharts = () => {
     { name: "Email", value: 200, color: "#B1E3FF" },
   ];
   const COLORS = [, "#BAEDBD", "#95A4FC", "#B1E3FF"];
-
-  const totalSales = data.reduce((acc, item) => acc + item.value, 0);
-  const percentage = (data[0].value / totalSales) * 100; // Percentage for Direct Sales
 
   return (
     <div className="h-[100%] flex flex-col gap-4 p-6 rounded-lg bg-[var(--primary-light)]">

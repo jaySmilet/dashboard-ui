@@ -1,4 +1,3 @@
-import React from "react";
 import LeftSidebar from "./components/Sidebar/LeftSidebar";
 import RightSidebar from "./components/Sidebar/RightSidebar";
 import Header from "./components/Header/Header";
@@ -29,6 +28,7 @@ const DashboardLayout = () => {
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/order-list" element={<OrderList />} />
+          <Route path="*" element={<MainContent />} />
         </Routes>
       </main>
 

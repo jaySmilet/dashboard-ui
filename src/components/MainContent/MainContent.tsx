@@ -1,4 +1,3 @@
-import React from "react";
 import { useImagePath } from "../../hooks/useImagePath";
 import { stats } from "../../static/static-data";
 import BarCharts from "../../charts/BarCharts";

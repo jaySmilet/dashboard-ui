@@ -1,4 +1,3 @@
-import React from "react";
 import { useImagePath } from "../hooks/useImagePath";
 
 type LocationRevenue = {

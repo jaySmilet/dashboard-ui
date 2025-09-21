@@ -1,4 +1,3 @@
-import React from "react";
 import StatusBadge from "../components/StatusBage/StatusBage";
 import { orders } from "../static/static-data";
 import { useImagePath } from "../hooks/useImagePath";
