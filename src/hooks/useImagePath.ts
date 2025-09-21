@@ -6,7 +6,7 @@
  */
 export const useImagePath = () => {
   const getImage = (fileName: string): string => {
-    return `/images/${fileName}`;
+    return `${import.meta.env.BASE_URL}/images/${fileName}`;
   };
 
   return { getImage };
