@@ -1,69 +1,90 @@
-# React + TypeScript + Vite
+# Dashboard UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modern React dashboard application built with TypeScript, Vite, Tailwind CSS, and Recharts. It features a responsive layout, sidebar navigation, charts, and an order list page.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive dashboard layout with left and right sidebars
+- Main content area with charts and statistics
+- Order List page with table, search, and pagination
+- Routing via React Router
+- Styled with Tailwind CSS and custom variables
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js (v18 or newer recommended)
+- npm
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repository:
+   ```sh
+   git clone <your-repo-url>
+   cd dashboard-ui
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
+4. Open the live app at [https://jaysmilet.github.io/dashboard-ui/](https://jaysmilet.github.io/dashboard-ui/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `src/` - Main source code
+  - `components/` - Reusable UI components
+  - `charts/` - Chart components (Bar, Pie, Revenue, etc.)
+  - `pages/` - Application pages (e.g., OrderList)
+  - `static/` - Static data
+  - `hooks/` - Custom hooks
+  - `DashboardLayout.tsx` - Main layout and routing
+  - `App.tsx` - App entry point
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Routing
+
+The app uses React Router for navigation. Main routes:
+
+- `/` - Dashboard main page
+- `/order-list` - Order List page
+
+## How to Navigate to the 'Order List' Page
+
+You can access the Order List page in two ways:
+
+1. **Direct URL:**
+
+   - Go to [https://jaysmilet.github.io/dashboard-ui/#/order-list](https://jaysmilet.github.io/dashboard-ui/#/order-list) in your browser.
+
+2. **Via App Navigation:**
+   - Use a `<Link to="/order-list">Order List</Link>` or call `navigate("/order-list")` from any component using React Router.
+
+When you are on the `/order-list` route, the right sidebar will be hidden and the main content area will expand to fill the space automatically.
+
+## Build & Deploy
+
+- Build for production:
+  ```sh
+  npm run build
+  ```
+- Preview production build:
+  ```sh
+  npm run preview
+  ```
+- Deploy to GitHub Pages:
+  ```sh
+  npm run deploy
+  ```
+
+## Customization
+
+- Edit `src/static/static-data.ts` for demo data
+- Update styles in `src/index.css` and `tailwind.config.js`
+
+## License
+
+MIT
