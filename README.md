@@ -33,6 +33,9 @@ This is a modern React dashboard application built with TypeScript, Vite, Tailwi
    npm run dev
    ```
 4. Open the live app at [https://jaysmilet.github.io/dashboard-ui/](https://jaysmilet.github.io/dashboard-ui/)
+<img width="817" height="540" alt="image" src="https://github.com/user-attachments/assets/6000dcea-7a28-4401-b1f5-323f4f940a40" />
+
+
 
 ## Project Structure
 
@@ -56,14 +59,29 @@ The app uses React Router for navigation. Main routes:
 
 You can access the Order List page in two ways:
 
-1. **Direct URL:**
+1. **Click on the Icon next to Theme Switcher**
+
+   - Click on the icon next to Theme Switcher Icon ( Or Sun Icon).
+      
+      <img width="499" height="387" alt="image" src="https://github.com/user-attachments/assets/6b606644-789d-459d-8beb-979c325f63f6" />
+
+
+2. **Direct URL:**
 
    - Go to [https://jaysmilet.github.io/dashboard-ui/#/order-list](https://jaysmilet.github.io/dashboard-ui/#/order-list) in your browser.
+     <img width="823" height="378" alt="image" src="https://github.com/user-attachments/assets/9ec77817-c8c5-46f6-9155-06056cca655b" />
 
-2. **Via App Navigation:**
+
+3. **Via App Navigation:**
    - Use a `<Link to="/order-list">Order List</Link>` or call `navigate("/order-list")` from any component using React Router.
 
 When you are on the `/order-list` route, the right sidebar will be hidden and the main content area will expand to fill the space automatically.
+
+## Back to the Dashboard from 'Order List' Page
+   - Just click on the Dashboard text to go back to 'Dashboard'
+
+     <img width="495" height="374" alt="image" src="https://github.com/user-attachments/assets/08203f41-1876-4669-bc59-f58eb70b3a34" />
+
 
 ## Build & Deploy
 
