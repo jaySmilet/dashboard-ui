@@ -140,3 +140,37 @@ export const rightSidebarData: RightSidebarItem[] = [
     ],
   },
 ];
+
+export interface Stats {
+  title: string;
+  value: string;
+  change: number;
+  bgColor: string;
+}
+
+export const stats: Stats[] = [
+  {
+    title: "Customers",
+    value: "3,781",
+    change: +11.01,
+    bgColor: "var(--primary-blue)",
+  },
+  {
+    title: "Orders",
+    value: "1,219",
+    change: -0.03,
+    bgColor: "var(--primary-light)",
+  },
+  {
+    title: "Revenue",
+    value: "$695",
+    change: +15.05,
+    bgColor: "var(--primary-light)",
+  },
+  {
+    title: "Growth",
+    value: "30.1%",
+    change: +6.08,
+    bgColor: "var(--primary-purple)",
+  },
+];

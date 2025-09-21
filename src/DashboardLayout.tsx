@@ -1,6 +1,8 @@
 import React from "react";
 import LeftSidebar from "./components/Sidebar/LeftSidebar";
 import RightSidebar from "./components/Sidebar/RightSidebar";
+import Header from "./components/Header/Header";
+import MainContent from "./components/MainContent/MainContent";
 
 const DashboardLayout = () => {
   return (
@@ -18,7 +20,10 @@ const DashboardLayout = () => {
       </aside>
 
       {/* Main content always visible */}
-      <main className="bg-gray-50 dark:bg-gray-900 p-6">Main</main>
+      <main className="bg-white dark:bg-gray-900">
+        <Header />
+        <MainContent />
+      </main>
 
       {/* Right panel fixed on lg+ */}
       <aside className="hidden lg:block bg-white dark:bg-gray-800 border-l [border-color:rgba(28,28,28,0.1)] p-5">
