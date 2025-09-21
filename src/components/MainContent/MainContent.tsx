@@ -22,6 +22,7 @@ const MainContent = () => {
             {stats.map((stat) => {
               return (
                 <div
+                  key={stat.title}
                   className={
                     "flex flex-col gap-2 p-6 rounded-2xl " +
                     (stat.bgColor ? ` bg-[${stat.bgColor}]` : "")

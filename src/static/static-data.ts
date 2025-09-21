@@ -174,3 +174,60 @@ export const stats: Stats[] = [
     bgColor: "var(--primary-purple)",
   },
 ];
+
+// types.ts
+export interface Order {
+  id: string;
+  user: {
+    name: string;
+    avatar: string;
+  };
+  project: string;
+  address: string;
+  date: string;
+  status: "In Progress" | "Complete" | "Pending" | "Approved" | "Rejected";
+}
+
+// mockData.ts
+export const orders: Order[] = [
+  {
+    id: "#CM9801",
+    user: { name: "Natali Craig", avatar: "https://i.pravatar.cc/40?img=1" },
+    project: "Landing Page",
+    address: "Meadow Lane Oakland",
+    date: "Just now",
+    status: "In Progress",
+  },
+  {
+    id: "#CM9802",
+    user: { name: "Kate Morrison", avatar: "https://i.pravatar.cc/40?img=2" },
+    project: "CRM Admin pages",
+    address: "Larry San Francisco",
+    date: "A minute ago",
+    status: "Complete",
+  },
+  {
+    id: "#CM9803",
+    user: { name: "Kate Morrison", avatar: "https://i.pravatar.cc/40?img=2" },
+    project: "CRM Admin pages",
+    address: "Larry San Francisco",
+    date: "A minute ago",
+    status: "Pending",
+  },
+  {
+    id: "#CM9804",
+    user: { name: "Kate Morrison", avatar: "https://i.pravatar.cc/40?img=2" },
+    project: "CRM Admin pages",
+    address: "Larry San Francisco",
+    date: "A minute ago",
+    status: "Rejected",
+  },
+  {
+    id: "#CM9805",
+    user: { name: "Kate Morrison", avatar: "https://i.pravatar.cc/40?img=2" },
+    project: "CRM Admin pages",
+    address: "Larry San Francisco",
+    date: "A minute ago",
+    status: "Approved",
+  },
+];

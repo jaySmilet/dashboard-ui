@@ -64,7 +64,7 @@ const LeftSidebar = () => {
 
       {menus.map((menu: Menu) => {
         return (
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1" key={menu.title}>
             <div className="flex items-center px-3 py-1 cursor-pointer">
               <p className="text-sm font-normal text-[var(--text-medium)]">
                 {menu.title}
@@ -72,7 +72,7 @@ const LeftSidebar = () => {
             </div>
             {menu.menuChild.map((mc) => {
               return (
-                <>
+                <React.Fragment key={menu.title + "-" + mc.title}>
                   <div
                     className={
                       "relative flex items-center gap-1 px-2 py-1 cursor-pointer " +
@@ -113,7 +113,10 @@ const LeftSidebar = () => {
                     mc.isCollapsed &&
                     mc.children.map((ch) => {
                       return (
-                        <div className="flex items-center gap-1 px-2 py-1 cursor-pointer">
+                        <div
+                          key={ch}
+                          className="flex items-center gap-1 px-2 py-1 cursor-pointer"
+                        >
                           <div className="w-4 h-4"></div>
                           <div className="flex items-center gap-1">
                             <div className="w-5 h-5"></div>
@@ -124,7 +127,7 @@ const LeftSidebar = () => {
                         </div>
                       );
                     })}
-                </>
+                </React.Fragment>
               );
             })}
           </div>

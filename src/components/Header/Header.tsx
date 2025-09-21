@@ -1,8 +1,10 @@
 import React from "react";
 import { useImagePath } from "../../hooks/useImagePath";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { getImage } = useImagePath();
+  const naviagte = useNavigate();
   return (
     <div className="flex justify-between items-ceter py-5 px-[28px] border-b [border-color:rgba(28,28,28,0.1)]">
       <div className="flex items-center gap-2">
@@ -17,7 +19,10 @@ const Header = () => {
           <span className="text-sm font-normal text-[var(--text-light)]">
             /
           </span>
-          <p className="text-sm font-normal text-[var(--text-strong)] px-2">
+          <p
+            className="text-sm font-normal text-[var(--text-strong)] px-2 cursor-pointer"
+            onClick={() => naviagte("/")}
+          >
             Default
           </p>
         </div>
@@ -42,6 +47,7 @@ const Header = () => {
             className="size-5 cursor-pointer"
           />
           <img
+            onClick={() => naviagte("/order-list")}
             src={getImage("ClockCounterClockwise.svg")}
             alt="ClockCounterClockwise"
             className="size-5 cursor-pointer"
